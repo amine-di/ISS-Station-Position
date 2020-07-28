@@ -18,7 +18,7 @@ window.setInterval(() => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let obj = JSON.parse(xhr.response);
             console.log(obj);
-            map.setView([obj.iss_position.latitude, obj.iss_position.longitude], 5);
+            map.setView([obj.iss_position.latitude, obj.iss_position.longitude]);
             L.circle([obj.iss_position.latitude, obj.iss_position.longitude], {
                 color: 'red',
                 fillColor: '#f03',
